@@ -1,0 +1,9 @@
+Rapida explicação do script:
+
+1. vc vai criar, dar admin e entrar no seu usuario (então esta no script pois ai dar erro)
+2. Logado vc vai dar chmod no caminho do ubuntu (sudo chmod +x /home/ubuntu)
+3. Baixe o repositorio do script onde tem todos os .sh (git clone)
+4. De chmod  para o diretorio (sudo chmod +rx /home/ubuntu/scriptInstalacao)
+5. entre no diretorio (cd scriptInstalacao)
+6. De chmod para os arquivos: docker-config, java-install e o banco de dados ( sudo chmod +x docker-config.sh  sudo chmod +x java-install.sh  sudo chmod +x yotte-bd.sql)
+7. Agora vc esta pronto para o script. Execute o comandando ./docker-config.sh (iremos configurar o docker primeiro)
