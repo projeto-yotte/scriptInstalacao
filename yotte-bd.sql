@@ -1,5 +1,5 @@
-CREATE USER 'yotte'@'localhost' IDENTIFIED BY 'yotte2023';
-GRANT ALL PRIVILEGES ON *.* TO 'yotte'@'localhost';
+CREATE USER 'yotte'@'172.17.0.1' IDENTIFIED BY 'yotte2023';
+GRANT ALL PRIVILEGES ON *.* TO 'yotte'@'172.17.0.1';
 FLUSH PRIVILEGES;
 
 
