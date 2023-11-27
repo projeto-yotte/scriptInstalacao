@@ -1,9 +1,9 @@
-Rapida explicação do script:
+Pré-configurações antes de rodar os scripts
 
-1. vc vai criar, dar admin e entrar no seu usuario (então esta no script pois ai dar erro)
-2. Logado vc vai dar chmod no caminho do ubuntu (sudo chmod +x /home/ubuntu)
-3. Baixe o repositorio do script onde tem todos os .sh (git clone)
-4. De chmod  para o diretorio (sudo chmod +rx /home/ubuntu/scriptInstalacao)
-5. entre no diretorio (cd scriptInstalacao)
-6. De chmod para os arquivos: docker-config, java-install e o banco de dados ( sudo chmod +x docker-config.sh  sudo chmod +x java-install.sh  sudo chmod +x yotte-bd.sql)
-7. Agora vc esta pronto para o script. Execute o comandando ./docker-config.sh (iremos configurar o docker primeiro)
+1. Crie um novo usuário, atribua permissão sudo ao usuário criado e em seguida, faça o login no mesmo. (Comando para dar sudo ao user ==> sudo usermod -aG sudo [nome-usuario])
+2. Dê permissão para o usuário ter acesso ao home/ubuntu. (sudo chmod +x /home/ubuntu)
+3. Faça download dos scripts de instalação usando o comando sudo git clone.
+4. Dê permissão para o usuário ter acesso ao diretório clonado. (sudo chmod +rx /home/ubuntu/scriptInstalacao)
+5. Acesse o diretório recém clonado (cd scriptInstalacao)
+6. Dê permissão para o usuário ter acesso a cada um dos arquivos. (Execute ==> sudo chmod +x docker-config.sh | sudo chmod +x java-install.sh | sudo chmod +x yotte-bd.sql)
+7. Acesso liberado, agora você está pronto para iniciar as configurações. Vamos iniciar pelo Docker, execute o ./docker-config.sh
