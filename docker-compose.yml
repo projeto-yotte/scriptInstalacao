@@ -11,7 +11,7 @@ services:
     image: mysql@latest
     restart: always
     environment:
-    MYSQL_ROOT_PASSWORD: urubu100
+    MYSQL_ROOT_PASSWORD: yotte2023
     MYSQL_DATABASE: yotte
     volumes:
       - ./init-scripts:/docker-entrypoint-initdb.d
