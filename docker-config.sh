@@ -59,12 +59,12 @@ sudo docker pull mysql:latest
 sleep 2
 echo -e "\033[${RED}m[yotte.u]:${NC} Imagem carregada com sucesso!"
 
-sudo docker build -t yotte-bd .
+sudo docker build -t yotte .
 sleep 15
 # Criando container e configurando o MySQL
-sudo docker run -d -p 3306:3306 --name yotte-container -e "MYSQL_DATABASE=yotte" -e "MYSQL_ROOT_PASSWORD=yotte2023" mysql:latest
+# sudo docker run -d -p 3306:3306 --name yotte-container -e "MYSQL_DATABASE=yotte" -e "MYSQL_ROOT_PASSWORD=yotte2023" mysql:latest
 
-docker run -d --name yotte-container -p 3306:3306 yotte-bd
+sudo docker run -d --name yotte-container -p 3306:3306 yotte
 
 sleep 15
 
