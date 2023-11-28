@@ -64,7 +64,7 @@ sleep 15
 # Criando container e configurando o MySQL
 sudo docker run -d -p 3306:3306 --name yotte-container -e "MYSQL_DATABASE=yotte" -e "MYSQL_ROOT_PASSWORD=yotte2023" mysql:latest
 
-docker run -d --name meu-container -p 3306:3306 yotte-bd
+docker run -d --name yotte-container -p 3306:3306 yotte-bd
 
 sleep 15
 
