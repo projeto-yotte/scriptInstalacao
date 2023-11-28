@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  java-app:
+    container_name: java-container
+    image: java17.0.6jdk
+    ports:
+      - 8080:8080
+  mysql:
+    container_name: mysql-container
+    image: mysql@latest
+    restart: always
+    environment:
+    MYSQL_ROOT_PASSWORD: urubu100
+    MYSQL_DATABASE: yotte
+    volumes:
+      - ./init-scripts:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+
+  volumes:
+    mysql_data:
