@@ -2,7 +2,7 @@
 FROM mysql:latest
 
 #Configura o banco de dados, informando o usuário, database e senha
-ENV MYSQL_USER=root
+ENV MYSQL_USER=yotte
 ENV MYSQL_DATABASE=yotte
 ENV MYSQL_ROOT_PASSWORD=yotte2023
 
