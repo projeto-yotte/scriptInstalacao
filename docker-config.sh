@@ -9,6 +9,7 @@ echo -e "\033[${RED}m[yotte.u]:${NC} Bem-vindo!! Iniciando a instalação e conf
 
 # Atualiza a lista de pacotes
 sudo apt update -y && sudo apt upgrade -y
+sudo apt-get install wmctrl
 echo -e "\033[${RED}m[yotte.u]:${NC} Pacotes atualizados!"
 
 # Instalação do Docker
