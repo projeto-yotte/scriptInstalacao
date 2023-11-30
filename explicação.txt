@@ -7,3 +7,10 @@ Pré-configurações antes de rodar os scripts
 5. Acesse o diretório recém clonado (cd scriptInstalacao)
 6. Dê permissão para o usuário ter acesso a cada um dos arquivos. (Execute ==> sudo chmod +x docker-config.sh | sudo chmod +x java-install.sh | sudo chmod +x yotte-bd.sql)
 7. Acesso liberado, agora você está pronto para iniciar as configurações. Vamos iniciar pelo Docker, execute o ./docker-config.sh
+
+
+para rodar
+git clone https://github.com/projeto-yotte/scriptInstalacao.git
+cd scriptInstalacao
+sudo chmod 777 wizard.sh
+./wizard.sh
