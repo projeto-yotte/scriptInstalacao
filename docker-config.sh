@@ -31,7 +31,6 @@ echo -e "\033[${RED}m[yotte.u]:${NC} Imagem Docker construída com sucesso!"
 # Criação do contêiner
 
 #sudo docker run -d -name yotte -e "MYSQL_ROOT_PASSWORD=yotte2023" -e "MYSQL_DATABASE=yotte "-e "MYSQL_USER=yotte" -e "MYSQL_PASSWORD=yotte2023" -p 3306:3306 mysql:latest
-sudo docker build -t yotte-bd .
 sleep 10
 #sudo docker run -d -p 3306:3306 --name yotte -e "MYSQL_DATABASE=yotte" -e "MYSQL_ROOT_PASSWORD=yotte2023" mysql:latest;
 sudo docker run -d --name yotte-container -p 3306:3306 yotte
@@ -43,7 +42,7 @@ sudo apt update -y
 echo "Docker foi instalado e configurado com sucesso. O Docker está pronto para uso!"
 
 # Execução de comandos no contêiner MySQL
-sudo docker exec -i yotte-container mysql -u root -pyotte2023 < /home/ubuntu/scriptInstalacao/yotte-bd.sql
+sudo docker exec -i yotte-container yotte -u yotte -pyotte2023 < /home/ubuntu/scriptInstalacao/yotte-bd.sql
 echo -e "\033[${RED}m[yotte.u]:${NC} Docker Noct.u executado com sucesso!"
 
 # Permissões de execução para o script Java
