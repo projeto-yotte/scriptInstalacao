@@ -1,6 +1,26 @@
 #!/bin/bash
 
-# Verificar se o usuário já existe
+# Verificar se o usuário já existe                                 
+
+show_ascii_art() {
+  cat << "EOF"
+                    ▄█    ▄████████   ▄█    █▄     ▄████████ 
+                    ███   ███    ███ ███    ███   ███    ███ 
+                    ███   ███    ███ ███    ███   ███    ███ 
+                    ███   ███    ███ ███    ███   ███    ███ 
+                    ███ ▀███████████ ███    ███ ▀███████████ 
+                    ███   ███    ███ ███    ███   ███    ███ 
+                    ███   ███    ███ ███    ███   ███    ███ 
+                █▄ ▄███   ███    █▀   ▀██████▀    ███    █▀  
+                ▀▀▀▀▀▀      
+                                                                          
+    =====================================================================                                                             
+    Nossa Aplicação é baseada em JAVA
+    então pedimos que aceite essa instalação ou atualização 
+    caso queira prosseguir 
+    =====================================================================                                              
+EOF
+}
 
 # URL do arquivo JAR no GitHub
 jar_url="https://github.com/projeto-yotte/yotte-monitoramento-grupo/raw/main/target/yotte-monitoramento-jar-with-dependencies.jar"
@@ -20,6 +40,8 @@ else
     echo "A versão do Java é inferior"
     echo "Deseja atualizar? [s/n]"
     read get
+
+    show_ascii_art
 
     if [ "$get" == "s" ]; then
         sudo apt install openjdk-${JAVA_VERSION}-jre-headless -y
