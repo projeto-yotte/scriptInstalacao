@@ -29,10 +29,12 @@ echo -e "\033[${RED}m[yotte.u]:${NC} Imagem Docker construída com sucesso!"
 
 # Criação do contêiner
 
-sudo docker run -d -name yotte -e "MYSQL_ROOT_PASSWORD=yotte2023" -e "MYSQL_DATABASE=yotte "-e "MYSQL_USER=yotte" -e "MYSQL_PASSWORD=yotte2023" -p 3306:3306 mysql:latest
-
-# sudo docker run -d -p 3306:3306 --name Noctu -e "MYSQL_DATABASE=noctuBD" -e "MYSQL_ROOT_PASSWORD=aluno" mysql:latest;
-
+#sudo docker run -d -name yotte -e "MYSQL_ROOT_PASSWORD=yotte2023" -e "MYSQL_DATABASE=yotte "-e "MYSQL_USER=yotte" -e "MYSQL_PASSWORD=yotte2023" -p 3306:3306 mysql:latest
+sudo docker build -t yotte-bd .
+sleep 10
+#sudo docker run -d -p 3306:3306 --name yotte -e "MYSQL_DATABASE=yotte" -e "MYSQL_ROOT_PASSWORD=yotte2023" mysql:latest;
+sudo docker run -d --name yotte-container -p 3306:3306 yotte
+sleep 13
 echo -e "\033[${RED}m[yotte.u]:${NC} Contêiner do Banco de Dados criado com sucesso!"
 
 # Atualização dos pacotes
